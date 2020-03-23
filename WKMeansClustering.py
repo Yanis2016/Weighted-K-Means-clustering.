@@ -172,10 +172,4 @@ class WKMeans(KMeans):
     def nouveaux_centroides(self, X):
         return np.array([list((X[self.labels_ == i] * self.w[self.labels_ == i].reshape((len(self.w[self.labels_ == i]), 1))).sum(axis=0)/self.w[self.labels_ == i].sum()) for i in np.unique(self.labels_)])
 
-
-
-
-                 
-if __name__ == "__main__" :
-    print("test")
   
